@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: microsoft/variable-substitution@v1 
       with:
-        files: 'employee.json'
+        files: 'parseme.json'
       env:
         username: chimpanda
         password: ${{ secrets.PASSWORD }}
