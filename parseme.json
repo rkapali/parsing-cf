@@ -1,7 +1,61 @@
 {
-    "first-name": "Toni",
-    "last-name": "Cranz",
-    "username": "",
-    "password": "",
-    "url": ""
+  "AppSettings": {
+    "AppName": "LearnIgnite",
+    "RootAccount": 21,
+    "PasswordResetExpiry": 1,
+    "UserInviteExpiry": 1,
+    "Token": "123456789",
+    "AuthTokenLife": 8,
+    "DefaultPassword": "123456789",
+    "CipherPassPhrase": "123456789190283902KJBJKBJbajsbdljabsd",
+    "DefaultPingTimespan": 120,
+    "PrimaryColour": "#007BFF",
+    "SecondaryColour": "#1890FF",
+    "TextColour": "#000000",
+    "HeadingColour": "#000000",
+    "BackgroundColour": "#F9F9F9",
+    "Signature-Life": 7
+  },
+  "UploadLimits": {
+    "CourseResourceFile": 2097152,
+    "ProfilePicture": 1048576,
+    "SlideBackground": 1048576,
+    "SlideMediaFile": 314572800,
+    "CourseTitleImageFile": 1048576,
+    "CourseWorkFile": 26214400,
+    "CertificateTemplate": 1048576,
+    "Default": 1048576
+  },
+  "FrontendUrls": {
+    "AdminBase": "https://dev.pyxida.com.np",
+    "TrainerBase": "https://trainer.pyxida.com.np",
+    "TraineeBase": "https://trainee.pyxida.com.np",
+    "Login": "/login",
+    "AcceptInvite": "/invite-accept?invitetoken=",
+    "ResetPassword": "/reset-password?resettoken=",
+    "Faq": "/courses/{0}/faqs/{1}",
+    "ActiveCourses": "/active-courses/",
+    "CourseProgress": "/courses/{0}/active-trainees/{1}"
+  },
+  "ConnectionStrings": {
+    "MySqlConnection": "server=pyxida-dev-free.cqbegmy9txu6.us-east-2.rds.amazonaws.com;database=lms;user=abcde;password=123456789; convert zero datetime=True"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "SendInBlue": {
+    "ApiKey": "123456789",
+    "FromEmail": "info@pyxida.com.np",
+    "FromName": "Pyxida"
+  },
+  "AmazonS3": {
+    "AccessKeyId": "ABCDEFGHIJK",
+    "SecretAccessKey": "fppPrU3YAbF221231245678990",
+    "Bucket": "account-resources"
+  },
+  "AllowedHosts": "*"
 }
