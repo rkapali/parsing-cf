@@ -13,3 +13,6 @@ jobs:
         username: chimpanda
         password: ${{ secrets.PASSWORD }}
         url: https://github.com/${{github.repository}}
+    - run: |
+       cat parseme.json
+    
