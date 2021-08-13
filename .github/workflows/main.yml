@@ -17,7 +17,7 @@ jobs:
         AmazonS3.AccessKeyId: ${{ secrets.AMAZONS3_ACCESSKEYID }}
         AmazonS3.SecretAccessKey: ${{ secrets.AMAZONS3_SECRETACCESSKEY}}
     - name: catting file
-    - run: |
+      run: |
        cat parseme.json
     - name: Read package.json
       id: package
