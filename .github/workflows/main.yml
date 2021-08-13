@@ -10,9 +10,11 @@ jobs:
       with:
         files: 'parseme.json'
       env:
-        username: chimpanda
-        password: ${{ secrets.PASSWORD }}
-        url: https://github.com/${{github.repository}}
+        AppSettings.Token: ${{ secrets.APPSETTINGS_TOKEN }}
+        AppSettings.CipherPassPhrase: ${{ secrets.APPSETTINGS_CIPHERPASSPHRASE }}
+        ConnectionStrings.MySqlConnection: ${{ secrets.CONNECTIONSTRING }}
+        SendInBlue.ApiKey: ${{ secrets.SENDINBLUE_APIKEY }}
+        AmazonS3.AccessKeyId: ${{ secrets.AMAZONS3_ACCESSKEYID }}
+        AmazonS3.SecretAccessKey: ${{ secrets.AMAZONS3_SECRETACCESSKEY}}
     - run: |
        cat parseme.json
-    
