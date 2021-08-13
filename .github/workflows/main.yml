@@ -2,7 +2,7 @@ on: [push]
 name: variable substitution in json
 
 jobs:
-  build:
+  parse:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -16,5 +16,14 @@ jobs:
         SendInBlue.ApiKey: ${{ secrets.SENDINBLUE_APIKEY }}
         AmazonS3.AccessKeyId: ${{ secrets.AMAZONS3_ACCESSKEYID }}
         AmazonS3.SecretAccessKey: ${{ secrets.AMAZONS3_SECRETACCESSKEY}}
+    - name: catting file
     - run: |
        cat parseme.json
+    - name: Read package.json
+      id: package
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ./parseme.json
+    - name: Echo parseme.json
+      run: echo "${{ steps.package.outputs.content }}"
+       
