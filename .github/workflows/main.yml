@@ -13,6 +13,11 @@ jobs:
     - name: Print Public IP
       run: |
          echo $
+         
+    - name: Print Public IP
+      run: |
+        echo ${{ steps.ip.outputs.ipv4 }}
+        echo ${{ steps.ip.outputs.ipv6 }}
       
     - uses: actions/checkout@v2
     - uses: microsoft/variable-substitution@v1 
@@ -33,6 +38,4 @@ jobs:
       uses: juliangruber/read-file-action@v1
       with:
         path: ./parseme.json
-    - name: Echo parseme.json
-      run: echo "${{ steps.package.outputs.content }}"
        
