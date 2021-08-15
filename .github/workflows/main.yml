@@ -1,10 +1,19 @@
 on: [push]
+    
 name: variable substitution in json
 
 jobs:
   parse:
     runs-on: ubuntu-latest
     steps:
+    - name: Public IP
+      id: ip
+      uses: haythem/public-ip@v1.2
+
+    - name: Print Public IP
+      run: |
+         echo $
+      
     - uses: actions/checkout@v2
     - uses: microsoft/variable-substitution@v1 
       with:
